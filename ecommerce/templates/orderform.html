@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+<div class="container">
+<div class="mb-3">
+  <label class="form-label">Address</label>
+  <input type="text" class="form-control"  name="a" placeholder="enter address">
+</div>
+<div class="mb-3">
+  <label class="form-label">Phone</label>
+  <input type="text" class="form-control" name="p" placeholder="enter phone">
+</div>
+<div class="mb-3">
+  <label class="form-label">Account no</label>
+  <input type="text" class="form-control" name="n" placeholder="enter account number">
+</div>
+<div class="mb-3">
+
+  <input type="submit" class="btn btn-primary form-control">
+</div>
+</div>
+
+{% endblock %}
